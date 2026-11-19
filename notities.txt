@@ -1,0 +1,22 @@
+- Lab 1a -
+
+Part 1 - smartphone GNSS: perimeter and area
+
+1. Python: filteren ruwe NMEA data        Maarten
+2. Raw approach using Python: lijn tussen alle meetpunten construeren volgens nearest neighbour
+    - eventueel: outlier detection
+    - berekenen lengte + opp raw
+    - berekenen lengte + opp met correctie voor 1m
+    - voor verslag: visualiseren in QGIS / Python
+3. Interpretive approach using QGIS: zelf het gebouw intekenen obv de meetpunten
+    - wel eerst in python een WKT of CSV oid maken met de punten om in te laden in QGIS
+    - daar een 1m grid instellen
+    - handmatig het gebouw tracen: metingen als houvast + 1m naar binnen
+    - bepalen lengte en opp (ik denk dat dat gewoon attributes zijn van onze ingetekende polygon)
+
+Part 2 - precision of GPS code observations
+
+1. Python: filteren ruwe NMEA data        Maarten
+2. (2a) scatter plots maken (matplotlib?)
+3. Precision comparisons
+    - averages en standard deviations 
