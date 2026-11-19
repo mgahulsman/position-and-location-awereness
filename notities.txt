@@ -1,3 +1,5 @@
+Plan/overzicht Lab 1
+
 - Lab 1a -
 
 Part 1 - smartphone GNSS: perimeter and area
@@ -14,9 +16,44 @@ Part 1 - smartphone GNSS: perimeter and area
     - handmatig het gebouw tracen: metingen als houvast + 1m naar binnen
     - bepalen lengte en opp (ik denk dat dat gewoon attributes zijn van onze ingetekende polygon)
 
+
 Part 2 - precision of GPS code observations
 
 1. Python: filteren ruwe NMEA data        Maarten
 2. (2a) scatter plots maken (matplotlib?)
-3. Precision comparisons
+3. (2b) Precision comparisons
     - averages en standard deviations 
+    - vergelijken met allerlei dingen: zie opdracht
+
+
+Part 3 - mission planning and DOP
+
+1. Grafieken maken met http://gnssmissionplanning.com/ + detailed explanation (zie opdracht)
+2. ^ vergelijken met resultaten Part 2
+
+- Lab 1b -
+
+Part 4 - survey-grade GNSS-RTK measurements
+
+1. Specify which vertices to measure
+2. Measure!
+    - CRS: ETRS89 (ppt -> check tomorrow)
+    - per vertex: RTK fix status, horizontal and vertical precision, number of satellites, epoch (date and time), antenna height
+    - group selfie
+    - !!!! (roughly) 4 vertices per corner
+
+Part 5 - RDNAPTRANS: perimeter, area and NAP heights
+
+- volgens specifieke methode de perimeter en het opp bepalen (zie opdracht)
+- dingen vergelijken, transformeren en justificeren
+
+Part 6 - re-assess the smartphone measurements
+
+Part 7 - PDOK: perimeter and area
+
+Determine the perimeter and area of the Faculty of Architecture and the Built Environment using the maps and tools provided by PDOK.
+
+Part 8 - conclusions and recommendations
+
+- tabel met alle resultaten
+- list and compare the different definitions and use-cases of precision in this assignment
