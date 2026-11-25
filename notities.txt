@@ -6,7 +6,7 @@ https://community.surveyinghub.com/t/what-are-nmea-0183-sentences/79
 
 Part 1 - smartphone GNSS: perimeter and area
 
-1. Python: filteren ruwe NMEA data        Maarten
+1. Python: filteren ruwe NMEA data           MAARTEN
 2. Raw approach using Python: lijn tussen alle meetpunten construeren volgens nearest neighbour
     - eventueel: outlier detection
     - berekenen lengte + opp raw
@@ -19,23 +19,23 @@ Part 1 - smartphone GNSS: perimeter and area
     - bepalen lengte en opp (ik denk dat dat gewoon attributes zijn van onze ingetekende polygon)
 
 
-Part 2 - precision of GPS code observations
+Part 2 - precision of GPS code observations    GUUS
 
-1. Python: filteren ruwe NMEA data        Maarten
+1. Python: filteren ruwe NMEA data
 2. (2a) scatter plots maken (matplotlib?)
 3. (2b) Precision comparisons
     - averages en standard deviations 
     - vergelijken met allerlei dingen: zie opdracht
 
 
-Part 3 - mission planning and DOP
+Part 3 - mission planning and DOP              HANNEKE
 
 1. Grafieken maken met http://gnssmissionplanning.com/ + detailed explanation (zie opdracht)
 2. ^ vergelijken met resultaten Part 2
 
 - Lab 1b -
 
-Part 4 - survey-grade GNSS-RTK measurements
+Part 4 - survey-grade GNSS-RTK measurements    
 
 1. Specify which vertices to measure
 2. Measure!
@@ -51,7 +51,7 @@ Part 5 - RDNAPTRANS: perimeter, area and NAP heights
 
 Part 6 - re-assess the smartphone measurements
 
-Part 7 - PDOK: perimeter and area
+Part 7 - PDOK: perimeter and area               CHRISTINA?
 
 Determine the perimeter and area of the Faculty of Architecture and the Built Environment using the maps and tools provided by PDOK.
 
