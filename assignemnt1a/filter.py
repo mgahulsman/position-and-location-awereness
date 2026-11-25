@@ -49,9 +49,9 @@ class GNGSA:
     vdop: float
     
 
-def structure_data():
-    # NOTE: this 
-    with open("assignemnt1a\\data\\gnss_log_2026_11_13_11_56_20.nmea", "r", encoding="utf-8") as file:
+def structure_data(nmea_path: str):
+    # NOTE: you can change this to structe the data correct and than extract the
+    with open(nmea_path, "r", encoding="utf-8") as file:
         line_number = 0
         lat_lon_pairs: list[tuple[float, float]] = []
 
@@ -100,7 +100,8 @@ def extract_something():
     """
     Write a function like this to extract data from your file which you can use in your own part.
     """
-    data = structure_data()
+    part_1_bouwpub_1m_path = "RTK_measurements\\part 1 bouwpub 1m.nmea"
+    data = structure_data(nmea_path=part_1_bouwpub_1m_path)
     # do something with the data and import this function in your own file
     return data
 
