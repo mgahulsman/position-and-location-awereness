@@ -1,5 +1,7 @@
 Plan/overzicht Lab 1
 
+https://community.surveyinghub.com/t/what-are-nmea-0183-sentences/79
+
 - Lab 1a -
 
 Part 1 - smartphone GNSS: perimeter and area
