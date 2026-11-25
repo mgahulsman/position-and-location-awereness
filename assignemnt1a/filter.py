@@ -107,3 +107,6 @@ def extract_something():
 
 # try
 extract_something()
+
+def new_fuction():
+    ...
