@@ -47,7 +47,13 @@ class Triangle:
         return 0.5 * Line(self.a, self.b).side(self.c)
 
     def area(self):
-        return abs(self.signed_area())
+        # Heron's formula, from the three side lengths
+        a = self.b.distance(self.c)
+        b = self.c.distance(self.a)
+        c = self.a.distance(self.b)
+        s = (a + b + c) / 2
+        # max with 0 because rounding can make it slightly negative for flat triangles
+        return math.sqrt(max(0.0, s * (s - a) * (s - b) * (s - c)))
 
     def centroid(self):
         return Point((self.a.x + self.b.x + self.c.x) / 3, (self.a.y + self.b.y + self.c.y) / 3)
