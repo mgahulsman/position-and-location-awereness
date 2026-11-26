@@ -70,7 +70,7 @@ def structure_data(nmea_path: str):
                         in_range_azimuth = (0 <= int(azimuth) < 360)
                         if not in_range_azimuth:
                             raise ValueError("Wrong attribute, azimuth should be in between 0 and 360 degrees.")
-                        print(f"line {line_number}: elevation {elevation}, azimuth {azimuth}")
+                        #print(f"line {line_number}: elevation {elevation}, azimuth {azimuth}")
                         GPGSV_list.append(GPGSV(elevation=elevation, azimuth=azimuth))
 
             # Docs: https://community.surveyinghub.com/t/nmea-gpgga-messages/58
@@ -81,7 +81,7 @@ def structure_data(nmea_path: str):
                         lat_lon_pairs.append(((lat, lon)))
                         # TO be added: height
                         # Might be a good hint: Height of geoid above WGS84 ellipsoid is an attribute
-                        print(f"line {line_number}: lat {lat}, lon {lon}")
+                        #print(f"line {line_number}: lat {lat}, lon {lon}")
                         GNGGA_list.append(GNGGA(lat=lat, lon=lon))
 
             elif line.startswith("NMEA,$GNGSA"):
@@ -89,21 +89,24 @@ def structure_data(nmea_path: str):
                 pdop = parts[-3] # Weird dat 14 niet werkt, maar dit lijkt voor nu wel te kloppen
                 hdop = parts[-2]
                 vdop = parts[-1]
-                print(f"line {line_number}: pdop {pdop}, hdop {hdop}, vdop {vdop}")
+                #print(f"line {line_number}: pdop {pdop}, hdop {hdop}, vdop {vdop}")
                 GNGSA_list.append(GNGSA(pdop=pdop, hdop=hdop, vdop=vdop))
             line_number += 1
 
-        return (GPGSV_list, GNGGA_list, GNGSA_list) 
+        return GPGSV_list, GNGGA_list, GNGSA_list 
 
 # use functions like this 
-def extract_something():
+def extract_lists(filepath):
     """
     Write a function like this to extract data from your file which you can use in your own part.
     """
-    part_1_bouwpub_1m_path = "RTK_measurements\\part 1 bouwpub 1m.nmea"
-    data = structure_data(nmea_path=part_1_bouwpub_1m_path)
+    GPGSV_list, GNGGA_list, GNGSA_list = structure_data(nmea_path=filepath)
     # do something with the data and import this function in your own file
-    return data
+    return GPGSV_list, GNGGA_list, GNGSA_list
 
-# try
-extract_something()
+
+def nmea_to_degrees(value):
+    value = float(value)
+    degrees = int(value // 100)
+    minutes = value - degrees * 100
+    return degrees + minutes / 60
